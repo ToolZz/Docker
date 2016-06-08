@@ -11,7 +11,7 @@ FROM ubuntu:14.04
 
 MAINTAINER Maurice de Vries
 
-ENV TERM xterm
+#ENV TERM xterm
 
 RUN apt-get update
 RUN apt-get -y upgrade
