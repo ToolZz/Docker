@@ -6,7 +6,7 @@
 #
 # develop: docker run -p 8080:80 -d -v myapp.py:/root/myapp.py
 
-# FROM ubuntu:16.04
+FROM ubuntu:16.04
 
 MAINTAINER Maurice de Vries
 
@@ -24,7 +24,7 @@ ENV TERM xterm
 # License for the specific language governing permissions and limitations under
 # the License.
 
-FROM debian:jessie
+# FROM debian:jessie
 
 # Install instructions from https://cwiki.apache.org/confluence/display/COUCHDB/Debian
 
