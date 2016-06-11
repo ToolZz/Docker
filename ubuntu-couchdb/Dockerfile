@@ -6,7 +6,9 @@
 #
 # develop: docker run -p 8080:80 -d -v myapp.py:/root/myapp.py
 
-FROM ubuntu:16.04
+#FROM ubuntu:16.04
+FROM debian:jessie
+
 
 MAINTAINER Maurice de Vries
 
