@@ -118,4 +118,3 @@ WORKDIR /var/lib/couchdb
 
 ENTRYPOINT ["tini", "--", "/docker-entrypoint.sh"]
 CMD ["couchdb"]
-Status 
