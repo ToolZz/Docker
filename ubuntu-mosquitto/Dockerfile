@@ -1,20 +1,12 @@
 FROM ubuntu:16.04
 
-# Derived from ansi/mosquitto, Ansgar Schmidt <ansgar.schmidt@gmx.net>
+MAINTAINER Maurice de Vries <>
 
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN apt-get install wget build-essential libwrap0-dev libssl-dev python-distutils-extra libc-ares-dev uuid-dev -y
-RUN mkdir -p /usr/local/src
-WORKDIR /usr/local/src
-RUN wget http://mosquitto.org/files/source/mosquitto-1.4.9.tar.gz
-RUN tar xvzf ./mosquitto-1.4.9.tar.gz
-WORKDIR /usr/local/src/mosquitto-1.4.9
-RUN make
-RUN make install
-RUN adduser --system --disabled-password --disabled-login mosquitto
-USER mosquitto
+RUN apt-get install mosquitto mosquitto-clients -y
+
 EXPOSE 1883
-CMD ["/usr/local/sbin/mosquitto"]
+CMD ["/usr/bin/service mosquitto start"]
