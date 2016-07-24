@@ -9,4 +9,4 @@ RUN apt-get upgrade -y
 RUN apt-get install mosquitto mosquitto-clients -y
 
 EXPOSE 1883
-CMD ["/usr/bin/service mosquitto start"]
+CMD ["/usr/bin/service","mosquitto","start"]
