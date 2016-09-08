@@ -23,7 +23,8 @@ RUN cd /opt/node-red/node_modules/node-red-contrib-freeboard/node_modules/freebo
 RUN cd /opt/node-red/node_modules/node-red-contrib-freeboard/node_modules/freeboard/ && sed -i '13ihead.js("js/freeboard.js","js/freeboard.plugins.min.js", "../freeboard_api/datasources","plugins/datasources/plugin_json_ws.js","plugins/datasources/plugin_node.js",' index.html
 RUN cd /opt/node-red && npm install node-red-node-mongodb
 RUN cd /opt/node-red && npm install node-red-contrib-mongodb2
-RUN cd /opt/node-red && npm install node-red-contrib-salesforce
+#RUN cd /opt/node-red && npm install node-red-contrib-salesforce
+RUN cd /opt/node-red && npm install node-red-contrib-couchdb
 RUN cd /opt/node-red && npm install npm install node-red-contrib-googlechart
 #RUN cd /opt/cloudgear/
 CMD ["node", "/opt/node-red/red.js"]
