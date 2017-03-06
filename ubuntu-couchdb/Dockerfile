@@ -1,8 +1,8 @@
-# build: docker build -t toolz/ubuntu-python .
+# build: docker build -t toolz/ubuntu-couchdb .
 #
-# run: docker run -d toolz/ubuntu-python
+# run: docker run -d toolz/ubuntu-couchdb
 #
-# debug: docker run -i -t toolz/ubuntu-python /bin/bash
+# debug: docker run -i -t toolz/ubuntu-couchdb /bin/bash
 #
 # develop: docker run -p 8080:80 -d -v myapp.py:/root/myapp.py
 
