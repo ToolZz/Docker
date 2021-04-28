@@ -9,7 +9,6 @@
 #FROM ubuntu:16.04
 FROM debian:jessie
 
-
 MAINTAINER Maurice de Vries
 
 ENV TERM xterm
